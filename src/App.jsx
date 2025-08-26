@@ -1,4 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { IndexLayout } from './components/indexLayout/indexLayout';
+import { HomePage } from './pages/home/homePage';
+import { Projects } from './pages/projects/projects';
+import { Snippets } from './pages/snippets/snippets';
+import { Contact } from './pages/contact/contact';
+import { ErrorBoundary } from './components/errorBoundary/errorBoundary';
 
 import './App.css';
 
@@ -14,7 +20,7 @@ function App() {
         },
         {
           path: 'projects',
-          element: <Elements />,
+          element: <Projects />,
         },
         {
           path: 'snippets',
