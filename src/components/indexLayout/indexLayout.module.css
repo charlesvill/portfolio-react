@@ -1,0 +1,5 @@
+main {
+    display: flex; /* or flex */
+    width: clamp(300px, 80%, 1000px);
+    margin: 0 auto;
+}

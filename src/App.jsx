@@ -5,8 +5,7 @@ import { Projects } from './pages/projects/projects';
 import { Snippets } from './pages/snippets/snippets';
 import { Contact } from './pages/contact/contact';
 import { ErrorBoundary } from './components/errorBoundary/errorBoundary';
-
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   const router = createBrowserRouter([
@@ -35,7 +34,7 @@ function App() {
     },
   ]);
   return (
-    <div>
+    <div className={styles.app}>
       <RouterProvider router={router} />
     </div>
   );

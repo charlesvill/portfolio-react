@@ -1,6 +1,7 @@
 export function About() {
   return (
     <section id="about">
+      <h4>About me</h4>
       <p>
         I’m a full-stack web developer with hands-on experience building
         applications in **Node.js, React, PostgreSQL, and Prisma**. Before
