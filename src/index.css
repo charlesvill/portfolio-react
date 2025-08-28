@@ -1,29 +1,64 @@
+@font-face {
+  font-family: 'Cascadia';
+  src: url('/static/fonts/Cascadia_Code/CascadiaCode-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/static/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/static/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson-Bold';
+  src: url('/static/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+
+  --base-text-color: #a8a39d;
+  --base-heading-color:  rgba(255, 255, 255, 0.87);
+  --accent-text-color: #d2691e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 html {
   box-sizing: border-box;
   width: 100%;
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 ::selection {
   color: black;
-  background: whitesmoke ;
+  background: whitesmoke;
 }
 
 a {
@@ -45,10 +80,18 @@ body {
 }
 
 h1 {
+  font-family: 'Atkinson-Bold';
   font-size: 3.2em;
   line-height: 1.1;
+
+  color: var(--accent-text-color);
 }
 
+strong {
+  color: #d2691e;
+  font-size: 1.15em;
+  font-weight: bold;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -81,8 +124,11 @@ button:focus-visible {
   }
 }
 p {
-  
-  padding: 0 4rem;
-  text-align: justify;
+  /* padding: 0 4rem; */
+  text-align: left;
+  color: var(--base-text-color);
+  font-size: 1.15em;
 }
-
+svg {
+  color: var(--accent-text-color);
+}

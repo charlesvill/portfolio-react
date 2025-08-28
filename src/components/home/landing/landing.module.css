@@ -3,9 +3,73 @@
   flex-direction: column; /* stack on mobile */
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  margin: 0 0 5rem 0;
 }
 
+.greetCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.headingCont {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+}
+.greeting > span {
+  color: var(--base-heading-color);
+}
+
+.greeting span {
+  font-size: 1.25rem; /* same scale as h2 */
+  font-weight: 600; /* make it look like a heading */
+  margin: 0;
+  padding: 0;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.introText .im {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--base-heading-color);
+}
+
+.introText .name {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--accent-text-color);
+  margin: 0;
+}
+
+.tagline {
+  display: flex;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  color: var(--base-heading-color);
+}
+
+.iconCont {
+  display: flex;
+  margin: 0 0.5em;
+  width: 4.5em;
+}
+.iconCont > svg {
+  width: 100%;
+  height: auto;
+}
 .navCont {
   display: flex;
   flex-direction: column;
@@ -28,7 +92,7 @@
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
-  color: grey;
+  color: var(--base-heading-color);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: background 0.2s;
@@ -36,8 +100,7 @@
 
 .navCont nav a:hover,
 .navCont nav a:focus {
-  background: white;
-
+  background: var(--base-text-color);
 }
 
 .imgCont {
@@ -51,7 +114,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Desktop: side-by-side */
@@ -83,4 +146,3 @@
     object-fit: cover; /* keeps proportions while filling space */
   }
 }
-

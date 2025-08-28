@@ -1,4 +1,4 @@
-import { Layout } from '../../components/homeLayoutNav/layoutNav';
+import { Layout } from '../../components/home/homeLayoutNav/layoutNav';
 import { Landing } from '../../components/home/landing/Landing';
 import { About } from '../../components/home/about/about';
 import { Skills } from '../../components/home/skills/skills';

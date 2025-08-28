@@ -1,13 +1,25 @@
 import styles from './landing.module.css';
+import { DiReact, DiNodejs, DiPostgresql } from 'react-icons/di';
 
 export function Landing() {
   return (
-    <header className="landing">
+    <header className={styles.landing}>
       <div className={styles.greetCont}>
-        <h1>My name is Charles Villalpando</h1>
-        <p>
-          Hello and welcome! I write and design full stack web applications.
-        </p>
+        <div className={styles.headingCont}>
+          <p className={styles.greeting}>{/* <span>Hello there,</span> */} </p>
+          <h1 className={styles.introText}>
+            <span className={styles.im}>Hello there, I’m</span>
+            <span className={styles.name}>Charles Villalpando!</span>
+          </h1>
+          <p className={styles.tagline}>
+            I design and write full stack web applications
+            <span className={styles.iconCont}>
+              <DiReact />
+              <DiNodejs />
+              <DiPostgresql />
+            </span>{' '}
+          </p>
+        </div>
       </div>
 
       <div className={styles.navCont}>
