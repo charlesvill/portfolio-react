@@ -1,0 +1,91 @@
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoCont {
+  font-family: 'Cascadia';
+  font-size: 2.5em;
+  color: var(--accent-text-color);
+  border-left: 2px solid;
+  border-radius: 30px;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  margin: 0 3em;
+}
+
+.navList > li > a {
+  color: var(--accent-text-color);
+  font-size: 1.2em;
+}
+
+.navList li a {
+  position: relative;      
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navList li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;           
+  background-color: var(--accent-text-color);
+  opacity: 0;             
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(2px); 
+}
+
+.navList li a:hover::after,
+.navList li a:focus::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.resumeBtn {
+  font-size: 1.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent-text-color);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--base-heading-color);
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.resumeBtn:hover,
+.resumeBtn:focus {
+  box-shadow: 0 0 10px var(--accent-text-color);
+  transform: translateY(-1px);
+}
+
+.dlSvg {
+  fill: var(--base-heading-color);
+  stroke: none;
+  width: 1.3em;
+  height: auto;
+}

@@ -5,6 +5,7 @@ import { Projects } from './pages/projects/projects';
 import { Snippets } from './pages/snippets/snippets';
 import { Contact } from './pages/contact/contact';
 import { ErrorBoundary } from './components/errorBoundary/errorBoundary';
+import { NotFound } from './pages/notFound/notFound';
 import styles from './App.module.css';
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
         },
       ],
       errorElement: <ErrorBoundary />,
+    },
+    {
+      path: '*',
+      element: <NotFound />,
     },
   ]);
   return (
