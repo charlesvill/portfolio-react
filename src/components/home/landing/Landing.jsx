@@ -6,7 +6,6 @@ export function Landing() {
     <header className={styles.landing}>
       <div className={styles.greetCont}>
         <div className={styles.headingCont}>
-          <p className={styles.greeting}>{/* <span>Hello there,</span> */} </p>
           <h1 className={styles.introText}>
             <span className={styles.im}>Hello there, I’m</span>
             <span className={styles.name}>Charles Villalpando!</span>
