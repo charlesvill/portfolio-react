@@ -1,7 +1,12 @@
+import { FeaturedProjects } from '../../components/projects/featured/featuredProjects';
+import { AdditionalProjects } from '../../components/projects/additional/additionalProjects';
+import styles from './projects.module.css';
+
 export function Projects() {
   return (
-    <section>
-      <div>this is where the projects will go</div>
-    </section>
+    <>
+      <FeaturedProjects />
+      <AdditionalProjects />
+    </>
   );
 }
