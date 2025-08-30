@@ -1,23 +1,32 @@
-import { useEffect, useState } from 'react';
-import matter from 'gray-matter';
+import { useState, useEffect } from 'react';
 
-export function useParseMarkdown(filepath) {
-  const [projData, setProjData] = useState('');
+// expects import.meta.glob vite import files for md and images
+export function useFileParser({ markdownFiles, images }) {
+  const [dataCollection, setDataCollection] = useState([]);
+
   useEffect(() => {
-    async function parseFile() {
-      const response = await fetch(filepath);
-      if (!response.ok) {
-        throw new Error('file path fetch failed');
+    const filesArray = Object.entries(markdownFiles).map(([path, mod]) => {
+      const { attributes, markdown } = mod;
+
+      let image = null;
+      if (attributes.image) {
+        // Take the markdown file directory (strip the filename)
+        const baseDir = path.split('/').slice(0, -1).join('/');
+
+        // Add the relative image path
+        const imageKey = `${baseDir}/${attributes.image.replace('./', '')}`;
+
+        image = images[imageKey]?.default;
       }
 
-      const raw = await response.text();
+      return {
+        frontmatter: { ...attributes, imageSource: image },
+        content: markdown,
+      };
+    });
 
-      const { data, content } = matter(raw);
-      setProjData({ frontmatter: data, content });
-    }
+    setDataCollection(filesArray);
+  }, [markdownFiles, images]);
 
-    parseFile();
-  }, [filepath]);
-
-  return projData && { ...projData };
+  return { projectData: dataCollection };
 }
