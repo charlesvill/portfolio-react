@@ -49,6 +49,7 @@ export default defineConfig([
       'prettier/prettier': 'error',
       'react/react-in-jsx-scope': 'off', // no need in React 17+
       'import/no-extraneous-dependencies': 'off', // often noisy in Vite
+      'react/prop-types': 'off',
     },
 
     settings: {

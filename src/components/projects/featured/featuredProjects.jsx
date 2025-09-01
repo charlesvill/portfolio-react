@@ -1,4 +1,5 @@
 import { useFileParser } from '../../utilities/hooks/useParseMarkdown';
+import styles from './featuredProjects.module.css';
 
 const markdownFiles = import.meta.glob('../../../content/featured/**/*.md', {
   eager: true,
@@ -10,6 +11,25 @@ const images = import.meta.glob(
 
 // featProjFn
 
+function FeaturedProject({ data }) {
+  const frontMatter = data.frontmatter;
+  return (
+    <div className={styles.projectCont}>
+      <div className={styles.contentCont}>
+        <p className={styles.contentTitle}>{frontMatter.title}</p>
+        <p className={styles.contentText}>{data.content}</p>
+      </div>
+      <div className={styles.imgWrapper}>
+        <img
+          src={frontMatter.imageSource}
+          alt={`image of project ${frontMatter.title}`}
+          className={styles.projectImg}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function FeaturedProjects() {
   const { projectData } = useFileParser({ markdownFiles, images });
   if (!projectData) {
@@ -20,11 +40,7 @@ export function FeaturedProjects() {
       <header>
         <h2>Featured Projects</h2>
         {projectData.map((element) => (
-          <div key={element.frontmatter.title}>
-            <img src={element.frontmatter.imageSource} />
-            {element.frontmatter.title}
-            <p>{element.content}</p>
-          </div>
+          <FeaturedProject data={element} key={element.title} />
         ))}
       </header>
     </section>

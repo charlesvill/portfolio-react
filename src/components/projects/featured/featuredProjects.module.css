@@ -1,0 +1,110 @@
+/* project container */
+.projectCont {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* text content */
+.contentCont {
+  max-height: 250px;
+  width: 100%;
+  flex: 1 1 35%; /* smaller by default */
+  z-index: 2;
+  background: black;
+  opacity: 70%;
+  color: black;
+  padding: .5rem;
+  transition: all 0.3s ease;
+}
+
+.contentTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contentText {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* image container */
+.imgWrapper {
+  flex: 2 1 65%; /* image grows faster */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projectImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+/* medium screens → overlap allowed, image dominates more */
+@media (max-width: 1024px) {
+  .projectCont {
+    gap: 1rem;
+  }
+
+  .contentCont {
+    flex: 1 1 30%;
+    margin-right: -10rem; /* overlap into image */
+  }
+
+  .imgWrapper {
+    flex: 2 1 70%; /* still larger share */
+  }
+}
+
+/* small screens → stack with image as hero */
+@media (max-width: 768px) {
+  .projectCont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgWrapper {
+    width: 100%;
+    flex: none;
+  }
+
+  .projectImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .contentCont {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    opacity: 80%;
+    /* color: var(--base-heading-color); */
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contentTitle {
+    font-size: 1.5rem;
+  }
+
+  .contentText {
+    font-size: 0.9rem;
+  }
+}
+
