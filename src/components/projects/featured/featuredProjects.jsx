@@ -17,7 +17,9 @@ function FeaturedProject({ data }) {
     <div className={styles.projectCont}>
       <div className={styles.contentCont}>
         <p className={styles.contentTitle}>{frontMatter.title}</p>
-        <p className={styles.contentText}>{data.content}</p>
+        <div className={styles.textWrapper}>
+          <p className={styles.contentText}>{data.content}</p>
+        </div>
       </div>
       <div className={styles.imgWrapper}>
         <img
@@ -25,6 +27,7 @@ function FeaturedProject({ data }) {
           alt={`image of project ${frontMatter.title}`}
           className={styles.projectImg}
         />
+        <div className={styles.cardShadow}></div>
       </div>
     </div>
   );

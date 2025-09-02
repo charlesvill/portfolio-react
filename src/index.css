@@ -33,11 +33,14 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background-color: #242424;
+  background-color: var(--background-darkest-color);
 
   --base-text-color: #a8a39d;
-  --base-heading-color:  rgba(255, 255, 255, 0.87);
+  --base-heading-color: rgba(255, 255, 255, 0.87);
   --accent-text-color: #d2691e;
+  --background-darkest-color: #1b1b1d;
+  --background-darker-color:#242526;
+  --background-dark-color:#242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -79,12 +82,17 @@ body {
   min-height: 100vh;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Atkinson-Bold';
+  color: var(--accent-text-color);
+}
+
+h1 {
   font-size: 3.2em;
   line-height: 1.1;
-
-  color: var(--accent-text-color);
 }
 
 strong {
