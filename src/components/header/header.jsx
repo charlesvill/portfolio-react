@@ -5,8 +5,11 @@ import styles from './header.module.css';
 export function Header() {
   return (
     <header className={styles.siteHeader}>
-      <div className={styles.logoCont}>CV</div>
-      <nav className={styles.nav}>
+      <a href="/" className={styles.logoCont} aria-label="Go to homepage">
+        CV
+      </a>
+
+      <nav className={styles.nav} aria-label="Main navigation">
         <ul className={styles.navList}>
           <li>
             <a href="/">Home</a>
@@ -18,13 +21,14 @@ export function Header() {
             <a href="/contact">Contact</a>
           </li>
         </ul>
+
         <button className={styles.resumeBtn}>
           Resume{' '}
           <Logo
             className={styles.dlSvg}
             aria-label="Download resume"
             role="img"
-          />{' '}
+          />
         </button>
       </nav>
     </header>
