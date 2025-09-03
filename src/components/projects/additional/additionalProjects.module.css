@@ -1,0 +1,48 @@
+.projectCollection {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* parent collection */
+.projectCollection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* responsive */
+  gap: 2rem;
+  align-items: stretch; /* makes all children in a row the same height */
+}
+
+/* each card */
+.projectCont {
+  display: flex;
+  flex-direction: column; /* stack content inside */
+  justify-content: space-between;
+  background: var(--background-dark-color);
+  border-radius: 10px;
+  padding: 1rem;
+  height: 100%; /* important for stretching */
+  box-sizing: border-box; /* padding doesn’t break the sizing */
+}
+
+.contentTitle {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--heading-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.contentText{
+
+}
+
+.linkWrapper > a {
+  margin: .2rem;
+}
+
+.techList{
+  padding: 0;
+  margin: .3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}

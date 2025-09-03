@@ -8,7 +8,27 @@ const markdownFiles = import.meta.glob('../../../content/additional/**/*.md', {
 
 function AdditionalProject({ data }) {
   const frontMatter = data.frontmatter;
-  return <article></article>;
+  return (
+    <article className={styles.projectCont}>
+      <div className={styles.contentCont}>
+        <p className={styles.contentTitle}>{frontMatter.title}</p>
+        <div className={styles.contextText}>
+          <Markdown>{data.content}</Markdown>
+        </div>
+        <ul className={styles.techList}>
+          {frontMatter.tech.map((element, index) => (
+            <li key={index}>{element}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.linkCont}>
+        <div className={styles.linkWrapper}>
+          <a href={frontMatter.external}>site</a>
+          <a href={frontMatter.github}>repo</a>
+        </div>
+      </div>
+    </article>
+  );
 }
 
 export function AdditionalProjects() {
@@ -23,10 +43,11 @@ export function AdditionalProjects() {
       <header>
         <h2>Additional Projects</h2>
       </header>
-      <div className={styles.projectCollection}></div>
-      {projectData.map((element, index) => {
-        <AdditionalProject data={element} key={index} />;
-      })}
+      <div className={styles.projectCollection}>
+        {projectData.map((element, index) => (
+          <AdditionalProject data={element} key={index} />
+        ))}
+      </div>
     </section>
   );
 }
