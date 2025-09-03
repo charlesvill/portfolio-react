@@ -3,34 +3,52 @@ import { SiGmail, SiLinkedin, SiInstagram, SiGithub } from 'react-icons/si';
 
 export function Contact() {
   return (
-    <section>
-      <heading>
-        <h2>{`Let's Work Together!`}</h2>
-      </heading>
-      <article>
+    <section aria-labelledby="contact-heading">
+      <header>
+        <h2 id="contact-heading">Let{`'`}s Work Together!</h2>
+      </header>
+
+      <article className={styles.pageCont}>
         <div className={styles.contactsCont}>
-          <h4>Primary Contact</h4>
+          <h3>Primary Contact</h3>
           <div className={styles.primaryCont}>
-            <SiGmail />
-            <a href="mailto:yourname@example.com?subject=Portfolio%20Inquiry&body=Hello!">
+            <SiGmail aria-hidden="true" />
+            <a
+              href="mailto:yourname@example.com?subject=Portfolio%20Inquiry&body=Hello!"
+              target="_blank"
+              rel="noreferrer"
+            >
               Send me an Email
             </a>
           </div>
-          <h6>Connect with me</h6>
-          <div className={styles.connectCont}>
-            <SiLinkedin />
-            <a href="www.linkedin.com/in/charles-villalpando-732b61289">
-              charles-villalpando
-            </a>
-          </div>
-          <div className={styles.connectCont}>
-            <SiInstagram />
-            <span>Coming Soon...</span>
-          </div>
-          <div className={styles.connectCont}>
-            <SiGithub />
-            <a href="https://github.com/charlesvill">charlesvill</a>
-          </div>
+
+          <h3>Connect with me</h3>
+          <ul className={styles.connectList}>
+            <li className={styles.connectCont}>
+              <SiLinkedin aria-hidden="true" />
+              <a
+                href="https://www.linkedin.com/in/charles-villalpando-732b61289"
+                target="_blank"
+                rel="noreferrer"
+              >
+                charles-villalpando
+              </a>
+            </li>
+            <li className={styles.connectCont}>
+              <SiGithub aria-hidden="true" />
+              <a
+                href="https://github.com/charlesvill"
+                target="_blank"
+                rel="noreferrer"
+              >
+                charlesvill
+              </a>
+            </li>
+            <li className={styles.connectCont}>
+              <SiInstagram aria-hidden="true" />
+              <span>Coming Soon...</span>
+            </li>
+          </ul>
         </div>
       </article>
     </section>

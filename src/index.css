@@ -39,8 +39,8 @@
   --base-heading-color: rgba(255, 255, 255, 0.87);
   --accent-text-color: #d2691e;
   --background-darkest-color: #1b1b1d;
-  --background-darker-color:#242526;
-  --background-dark-color:#242424;
+  --background-darker-color: #242526;
+  --background-dark-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -67,10 +67,16 @@ html {
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration-line: underline;        /* force underline always */
+  text-decoration-color: transparent;     /* invisible at first */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.3s ease;
 }
-a:hover {
-  color: #535bf2;
+
+a:hover,
+a:focus {
+  text-decoration-color: currentColor;    /* underline fades in */
 }
 
 body {
