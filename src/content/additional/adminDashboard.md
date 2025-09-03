@@ -1,13 +1,11 @@
 ---
-date:'2023-08-10'
+date: '2023-08-10'
 title: 'Admin Dashboard'
 github: 'https://github.com/charlesvill/Admin-Dashboard'
 external: 'https://charlesvill.github.io/Admin-Dashboard/'
 tech: 
-    - HTML
-    - CSS
+  - HTML
+  - CSS
 ---
 
 Stylish and practical grid layout for a potential admin dashboard. see it in action as admin portal for [Blog app](https://blog-odin.netlify.app/admin). Use example user from [Blog README](https://github.com/charlesvill/Blog-API#readme)
-
-

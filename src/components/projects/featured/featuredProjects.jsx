@@ -1,4 +1,5 @@
 import { useFileParser } from '../../utilities/hooks/useParseMarkdown';
+import Markdown from 'react-markdown';
 import styles from './featuredProjects.module.css';
 
 const markdownFiles = import.meta.glob('../../../content/featured/**/*.md', {
@@ -14,22 +15,22 @@ const images = import.meta.glob(
 function FeaturedProject({ data }) {
   const frontMatter = data.frontmatter;
   return (
-    <div className={styles.projectCont}>
+    <article className={styles.projectCont}>
       <div className={styles.contentCont}>
-        <p className={styles.contentTitle}>{frontMatter.title}</p>
+        <h3 className={styles.contentTitle}>{frontMatter.title}</h3>
         <div className={styles.textWrapper}>
-          <p className={styles.contentText}>{data.content}</p>
+          <Markdown>{data.content}</Markdown>
         </div>
       </div>
-      <div className={styles.imgWrapper}>
+      <figure className={styles.imgWrapper}>
         <img
           src={frontMatter.imageSource}
-          alt={`image of project ${frontMatter.title}`}
+          alt={`Screenshot of project ${frontMatter.title}`}
           className={styles.projectImg}
         />
-        <div className={styles.cardShadow}></div>
-      </div>
-    </div>
+        <div className={styles.cardShadow} aria-hidden="true"></div>
+      </figure>
+    </article>
   );
 }
 
@@ -42,10 +43,10 @@ export function FeaturedProjects() {
     <section>
       <header>
         <h2>Featured Projects</h2>
-        {projectData.map((element) => (
-          <FeaturedProject data={element} key={element.title} />
-        ))}
       </header>
+      {projectData.map((element, index) => (
+        <FeaturedProject data={element} key={index} />
+      ))}
     </section>
   );
 }
