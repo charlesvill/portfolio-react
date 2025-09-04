@@ -13,7 +13,7 @@ import styles from './skills.module.css';
 export function Skills() {
   return (
     <section id="skills">
-      <h5>Technologies I speak:</h5>
+      <h4>Technologies I speak:</h4>
       <ul className={styles.skillList}>
         <li>
           <SiReact /> React

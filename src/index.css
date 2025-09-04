@@ -91,10 +91,14 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3
+ {
   font-family: 'Atkinson-Bold';
   color: var(--accent-text-color);
+}
+h4 {
+  font-family: 'Atkinson-Bold';
+  color: var(--base-heading-color);
 }
 
 h1 {
@@ -107,6 +111,7 @@ strong {
   font-size: 1em;
   font-weight: bold;
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
