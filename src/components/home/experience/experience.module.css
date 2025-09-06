@@ -44,6 +44,7 @@
   flex: 3;
 }
 .contentBox > h5 {
+  text-align: left;
   margin-top: 0;
 }
 .contentBox > ul {
@@ -54,13 +55,25 @@
 }
 
 .contentList {
+
 }
+
 .listItem {
+  position: relative;
   font-family: 'Atkinson';
   margin: 0.7rem 0;
   list-style: none;
   text-align: left;
   color: var(--base-text-color);
+}
+.listItem::before {
+
+  content: '>';
+  font-family: 'Atkinson-Bold';
+  position:absolute;
+  left: -1rem;
+  color: var(--accent-text-color);
+
 }
 
 @media (max-width: 900px) {
