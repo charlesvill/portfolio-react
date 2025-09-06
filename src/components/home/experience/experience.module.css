@@ -32,6 +32,7 @@
 .heading:hover {
   outline: none !important; /* override global */
   /* border-bottom-color: var(--accent-color); */
+  padding-left: .2rem;
   box-shadow: -2px 0 0 0 var(--base-heading-color);
 }
 

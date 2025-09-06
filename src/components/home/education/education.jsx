@@ -7,30 +7,44 @@ export function Education() {
         <h3>Schooling</h3>
       </header>
       <article className={styles.articleCont}>
-        <h4>Masters</h4>
-        <ul>
-          <li>
-            <h5>Currently Seeking Opportunities for MS Comp Sci</h5>
-            <ul>
-              <li>
-                Interested fields include LLMs and C++ for critical runtime
-                environments
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div className={styles.headingBox}>
+          <h4 className={styles.heading}>
+            University of California, Los Angeles (UCLA)
+          </h4>
+          <h5>Bachelors</h5>
+        </div>
+        <div className={styles.contentBox}>
+          <ul>
+            <li className={styles.listItem}>
+              B.A. Philosophy w/ Cum Laude and Departmental Honors; GPA: 3.72
+            </li>
+            <li className={styles.listItem}>
+              Mastered critical thinking methodology for solving problems and
+              simplifying complex ideas for effective collaboration
+            </li>
+          </ul>
+        </div>
       </article>
-      <article>
-        <h4>Bachelors</h4>
-        <ul>
-          <li>
-            <h5>University of California, Los Angeles (UCLA)</h5>
-            <ul>
-              <li>B.A. Philosophy w/ Cum Laude and Departmental Honors</li>
-              <li>GPA: 3.72</li>
-            </ul>
-          </li>
-        </ul>
+      <article className={styles.articleCont}>
+        <div className={styles.headingBox}>
+          <h4 className={styles.heading}>
+            {' '}
+            Seeking Opportunities For MS Comp Sci
+          </h4>
+          <h5>Masters</h5>
+        </div>
+        <div className={styles.contentBox}>
+          <ul>
+            <li className={styles.listItem}>
+              Interested fields include LLMs, embedded systems and low level
+              languages such as Rust and C++ for critical runtime environments
+            </li>
+            <li className={styles.listItem}>
+              Prioritizing hybrid programs to continue to tend to clients and
+              projects while furthering my education
+            </li>
+          </ul>
+        </div>
       </article>
     </section>
   );
