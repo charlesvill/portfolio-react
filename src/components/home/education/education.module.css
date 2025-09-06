@@ -1,1 +1,20 @@
+.articleCont {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-dark-color);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.tabBox {
+  padding: .5rem;
+}
+
+.heading {
+  color: var(--base-header-color);
+}
+
+.active {
+  color: var(--accent-text-color);
+}
 

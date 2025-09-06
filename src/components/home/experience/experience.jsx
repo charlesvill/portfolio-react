@@ -8,11 +8,11 @@ const workData = {
       {
         title: 'Odin Project',
         list: [
-          'Front-end and serverside development and deployment',
-          'Clear, maintainable code following modern Object Oriented design patterns',
-          'Speciality in designing REST API backends with relational database for CRUD functions',
-          'Secure user authentication with JSON Web Tokens that is CDN deployment ready',
-          'Designed, developed over 20 projects prioritizing vanilla js,html, css, react to build strong foundations for solving problems and designing critical software infastructure',
+          'Speciality in development and deployment of Front-end and serverside apps conforming to modern Object Oriented design patterns that are both clear and maintainable',
+          'Designed and tested REST API backends with relational database for reliable CRUD functions',
+          'Secured critial user data with authentication through JSON Web Tokens facilitating minimal refactor to deploy on CDN platforms',
+          'Designed, developed over 20 projects prioritizing vanilla JavaScript, SQL, HTML, CSS and React to build strong foundations for greater adaptability to different tech stacks',
+          'Ai assisted but not led - I take great pride in what I have architected and built, no vibe coders here',
         ],
       },
     ],
@@ -23,7 +23,7 @@ const workData = {
       {
         title: 'Special Education Case Manager - Total Education Systems',
         list: [
-          'Review, Plan, and Develop IEPs for over 95 students accross * campuses in the LA region ',
+          'Review, Plan, and Develop IEP (legal document outlining school plan to meet student needs) for over 95 students accross 8 campuses in the LA region under federal mandated timelines',
           'Prioritized high-impact tasks and streamlined processes for efficiency in meeting a high volume of cases',
         ],
       },
@@ -32,7 +32,7 @@ const workData = {
           'Special Education Teacher - Alliance College Ready Public Schools',
         list: [
           'Specialist in tailoring and accommodating curriculum to provide access to scholars with diverse learning needs',
-          'Collaborated closely with team of stakeholders for each scholar unifying on education plan and methodology to refactor ed plan',
+          'Collaborated closely with team of stakeholders for each scholar unifying on education plan and effectively communicate expectations to meet student needs',
         ],
       },
     ],
@@ -50,20 +50,22 @@ function TabButton({ heading, currentArticle, handleSelection }) {
     </button>
   );
 }
+
 function ArticleComponent({ data }) {
   return (
-    <div className={styles.contentWrapper}>
+    <>
       <h5>{data.title}</h5>
       <ul className={styles.contentlist}>
-        {data.content.map((listItem, index) => (
+        {data.list.map((listItem, index) => (
           <li className={styles.listItem} key={index}>
             {listItem}
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
+
 export function Experience() {
   const [currentArticle, setArticle] = useState('softwareDevelopment');
   // const tabHeadings = Object.entries(workData).map(([key, prop]) => prop.primaryHeading);

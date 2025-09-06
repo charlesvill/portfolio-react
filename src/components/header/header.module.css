@@ -99,8 +99,10 @@
 @media (max-width: 768px) {
   .siteHeader {
     box-sizing: border-box;
-    max-width: 430px;
+    max-width: 768px;
+
     margin-bottom: 2rem;
+    /* margin-bottom:2rem; */
   }
   .logoCont{
     padding: 0;
