@@ -85,7 +85,7 @@ export function Experience() {
   return (
     <section id="experience">
       <header>
-        <h3>Experience</h3>
+        <h2>Experience</h2>
       </header>
       <article className={styles.articleCont}>
         <div className={styles.tabBox}>

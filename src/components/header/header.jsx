@@ -3,6 +3,10 @@ import Logo from '../../static/icons/download.svg?react';
 import styles from './header.module.css';
 
 export function Header() {
+  function handleDownload() {
+    window.open('/static/resume.pdf', '_blank');
+  }
+
   return (
     <header className={styles.siteHeader}>
       <a href="/" className={styles.logoCont} aria-label="Go to homepage">
@@ -22,7 +26,7 @@ export function Header() {
           </li>
         </ul>
 
-        <button className={styles.resumeBtn}>
+        <button className={styles.resumeBtn} onClick={handleDownload}>
           Resume{' '}
           <Logo
             className={styles.dlSvg}

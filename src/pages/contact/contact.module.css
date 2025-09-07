@@ -13,7 +13,7 @@
 }
 
 .contactsCont {
-  width: 70%;
+  width: 100%;
   height: 400px;
   background-color: var(--background-darker-color);
   display: flex;

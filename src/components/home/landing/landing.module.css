@@ -7,6 +7,7 @@
 }
 
 .greetCont {
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +56,6 @@
 
 .tagline {
   display: flex;
-  font-size: 1rem;
   margin: 0.5rem 0 0;
   padding: 0;
   color: var(--base-heading-color);

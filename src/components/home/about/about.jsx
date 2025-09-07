@@ -1,4 +1,5 @@
 import Markdown from 'react-markdown';
+import { Skills } from '../skills/skills';
 
 export function About() {
   const md = `
@@ -22,6 +23,7 @@ export function About() {
     <section id="about">
       <h2>About me</h2>
       <Markdown>{md}</Markdown>
+      <Skills />
     </section>
   );
 }

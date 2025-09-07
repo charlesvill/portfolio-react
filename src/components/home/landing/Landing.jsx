@@ -28,13 +28,10 @@ export function Landing() {
               <a href="#about">Summary</a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
               <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#education">Education</a>
+              <a href="#school">School</a>
             </li>
           </ul>
         </nav>

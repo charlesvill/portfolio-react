@@ -1,3 +1,6 @@
+.skills {
+  margin-top: 3rem;
+}
 .skillList {
   display: flex;
   flex-wrap: wrap;

@@ -1,3 +1,4 @@
+import styles from './layoutNav.module.css';
 export function Layout({ children }) {
-  return <div>{children}</div>;
+  return <div className={styles.layoutCont}>{children}</div>;
 }

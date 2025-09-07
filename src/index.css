@@ -96,16 +96,20 @@ h3
   font-family: 'Atkinson-Bold';
   color: var(--accent-text-color);
 }
-h4 {
-  font-family: 'Atkinson-Bold';
-  color: var(--base-heading-color);
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+h4 {
+  font-family: 'Atkinson-Bold';
+  color: var(--base-heading-color);
+}
+h5 {
+  font-size: 1.05rem;
+}
+h6 {
+  color: var(--base-text-color);
+}
 strong {
   color: #d2691e;
   font-size: 1em;
@@ -128,23 +132,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 p {
   /* padding: 0 4rem; */
   text-align: left;
   color: var(--base-text-color);
-  font-size: 1.15em;
+  font-size: 1.2em;
 }
 svg {
   color: var(--accent-text-color);
