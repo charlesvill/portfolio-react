@@ -3,7 +3,7 @@ import styles from './education.module.css';
 export function Education() {
   return (
     <>
-      <section id="school">
+      <section id="education">
         <header>
           <h2>Schooling</h2>
         </header>{' '}

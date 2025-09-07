@@ -8,4 +8,4 @@ tech:
   - CSS
 ---
 
-Stylish and practical grid layout for a potential admin dashboard. see it in action as admin portal for [Blog app](https://blog-odin.netlify.app/admin). Use example user from [Blog README](https://github.com/charlesvill/Blog-API#readme)
+Stylish and practical grid layout for a potential admin dashboard. See it in action as admin portal for [Blog app](https://blog-odin.netlify.app). Use example user from [Blog README](https://github.com/charlesvill/Blog-API#readme)

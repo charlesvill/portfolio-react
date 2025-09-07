@@ -11,7 +11,7 @@ export function Landing() {
             <span className={styles.name}>Charles Villalpando!</span>
           </h1>
           <p className={styles.tagline}>
-            I design and write full stack web applications
+            I design and write full stack web applications.
             <span className={styles.iconCont}>
               <DiReact />
               <DiNodejs />
@@ -31,7 +31,7 @@ export function Landing() {
               <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#school">School</a>
+              <a href="#education">Education</a>
             </li>
           </ul>
         </nav>
