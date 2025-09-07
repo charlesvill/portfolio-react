@@ -12,7 +12,6 @@ const workData = {
           'Designed and tested REST API backends with relational database for reliable CRUD functions',
           'Secured critial user data with authentication through JSON Web Tokens facilitating minimal refactor to deploy on CDN platforms',
           'Designed, developed over 20 projects prioritizing vanilla JavaScript, SQL, HTML, CSS and React to build strong foundations for greater adaptability to different tech stacks',
-          'Ai assisted but not led - I take great pride in what I have architected and built, no vibe coders here',
         ],
       },
     ],
