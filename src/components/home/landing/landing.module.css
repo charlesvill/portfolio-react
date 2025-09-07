@@ -1,9 +1,8 @@
 .landing {
   display: flex;
-  flex-direction: column; /* stack on mobile */
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 0 0 5rem 0;
 }
 
 .greetCont {
@@ -50,6 +49,7 @@
   font-weight: 700;
   line-height: 1.2;
 
+  text-align: left;
   color: var(--accent-text-color);
   margin: 0;
 }
@@ -122,6 +122,9 @@
 
 /* Desktop: side-by-side */
 @media (min-width: 768px) {
+  .name {
+    text-align: center;
+  }
   .navCont {
     flex-direction: row;
     justify-content: space-between;
@@ -144,7 +147,7 @@
   }
 
   .imgCont img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover; /* keeps proportions while filling space */
   }
