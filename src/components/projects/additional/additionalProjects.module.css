@@ -30,12 +30,16 @@
   margin-bottom: 0.5rem;
 }
 
-.contentText{
-
+.contextText > p {
+  font-size: 1rem;
 }
 
 .linkWrapper > a {
   margin: .2rem;
+}
+
+.linkWrapper > a > svg:hover {
+  color: var(--base-text-color);
 }
 
 .techList{

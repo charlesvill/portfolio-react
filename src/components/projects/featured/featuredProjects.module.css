@@ -44,8 +44,14 @@
 
 .textWrapper > p {
   margin: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+.linkCont > a {
+  margin: .3rem;
+}
+.linkCont > a > svg:hover {
+  color: var(--base-text-color);
 }
 
 /* image container */

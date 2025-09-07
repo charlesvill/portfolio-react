@@ -1,6 +1,8 @@
 import { useFileParser } from '../../utilities/hooks/useParseMarkdown';
 import Markdown from 'react-markdown';
 import styles from './additionalProjects.module.css';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import { SiGithub } from 'react-icons/si';
 
 const markdownFiles = import.meta.glob('../../../content/additional/**/*.md', {
   eager: true,
@@ -23,8 +25,12 @@ function AdditionalProject({ data }) {
       </div>
       <div className={styles.linkCont}>
         <div className={styles.linkWrapper}>
-          <a href={frontMatter.external}>site</a>
-          <a href={frontMatter.github}>repo</a>
+          <a href={frontMatter.external}>
+            <FaExternalLinkAlt />
+          </a>
+          <a href={frontMatter.github}>
+            <SiGithub />
+          </a>
         </div>
       </div>
     </article>
