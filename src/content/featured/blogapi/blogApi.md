@@ -15,6 +15,6 @@ tech:
 Blogging app where members can post, read, like, and delete posts.
 
 **Example User**  
-email: `charlesvill`  
+username: `charlesvill`  
 password: `1234`
 

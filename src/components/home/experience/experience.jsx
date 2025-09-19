@@ -17,7 +17,7 @@ const workData = {
     ],
   },
   education: {
-    primaryHeading: 'Educator',
+    primaryHeading: 'Special Education',
     content: [
       {
         title: 'Special Education Case Manager - Total Education Systems',

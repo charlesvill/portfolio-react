@@ -14,7 +14,7 @@ export function Contact() {
           <div className={styles.primaryCont}>
             <SiGmail aria-hidden="true" />
             <a
-              href="mailto:yourname@example.com?subject=Portfolio%20Inquiry&body=Hello!"
+              href="mailto:charlesvill26@gmail.com?subject=Portfolio%20Inquiry&body=Hello!"
               target="_blank"
               rel="noreferrer"
             >

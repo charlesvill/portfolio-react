@@ -10,35 +10,28 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
   margin-right: 0.5rem;
 }
 
 .heading {
-  font-size: ;
+  font-size:;
   color: var(--base-header-color);
-  /* white-space: nowrap; */
   background-color: transparent;
   padding: 0;
   margin-bottom: 1rem;
-  border-bottom: 3px solid transparent;
   border-radius: 0;
-  transition: border-bottom-color 0.25s ease-in-out;
-}
-
-.heading:focus,
-.heading:focus-visible,
-.heading:hover {
-  outline: none !important; /* override global */
-  /* border-bottom-color: var(--accent-color); */
-  padding-left: 0.2rem;
-  box-shadow: -2px 0 0 0 var(--base-heading-color);
 }
 
 .active {
   font-family: 'Atkinson-Bold';
   color: var(--accent-text-color);
+  padding: .2rem;
+  box-shadow:
+    0 0 15px 5px rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 5px;
 }
 
 .contentBox {

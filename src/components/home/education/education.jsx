@@ -5,7 +5,7 @@ export function Education() {
     <>
       <section id="education">
         <header>
-          <h2>Schooling</h2>
+          <h2>Formal Education</h2>
         </header>{' '}
         <div className={styles.parentWrapper}>
           <article className={styles.articleCont}>

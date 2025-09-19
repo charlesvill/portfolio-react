@@ -70,12 +70,15 @@
     flex-direction: column;
   }
   .headingBox {
-    flex-direction: row;
     margin: 1rem 0;
     background-color: var(--background-darkest-color);
     padding: 1rem;
     border-radius: 15px;
   }
+  .headingBox > h5 {
+    margin: 0;
+  }
+
   .listItem {
     padding: 1rem;
   }
